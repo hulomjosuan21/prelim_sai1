@@ -1,0 +1,10 @@
+student_id
+first_name
+last_name
+email
+gender
+course
+user_address
+birthdate
+profile
+date_created
