@@ -10,11 +10,11 @@ $gender = $_POST['gender'];
 $course = $_POST['course'];
 $bday = $_POST['bday'];
 $address = $_POST['address'];
-$profile = $_POST['profile'];
+$profile = $_POST['profile'] ?? null;
 
 $query = "UPDATE students_table 
           SET first_name = ?, last_name = ?, email = ?, gender = ?, course = ?, birthdate = ?, user_address = ?, profile = ? 
-          WHERE id = ?";
+          WHERE student_id = ?";
 
 $statement = $connection->prepare($query);
 $res = $statement->execute([$first_name, $last_name, $email, $gender, $course, $bday, $address, $profile, $student_id]);
